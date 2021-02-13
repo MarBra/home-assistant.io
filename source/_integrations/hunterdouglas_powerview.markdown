@@ -11,6 +11,10 @@ ha_iot_class: Local Polling
 ha_config_flow: true
 ha_codeowners:
   - '@bdraco'
+ha_homekit: true
+ha_platforms:
+  - cover
+  - sensor
 ---
 
 The `hunterdouglas_powerview` integration allows you to integrate your [Hunter Douglas PowerView](https://www.hunterdouglas.com/operating-systems/powerview-motorization/support) devices in Home Assistant.

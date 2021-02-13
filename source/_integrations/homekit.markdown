@@ -9,6 +9,7 @@ ha_domain: homekit
 ha_config_flow: true
 ha_codeowners:
   - '@bdraco'
+ha_zeroconf: true
 ---
 
 The HomeKit Bridge integration allows you to make your Home Assistant entities available in Apple HomeKit, so they can be controlled from Apple's Home app and Siri. Please make sure that you have read the [considerations](#considerations) listed below to save you some trouble later. However if you do encounter issues, check out the [troubleshooting](#troubleshooting) section.
@@ -74,7 +75,7 @@ homekit:
         type: boolean
         default: true
       port:
-        description: Port for the HomeKit extension.
+        description: Port for the HomeKit extension. If you are adding more than one instance they need to have different values for port.
         required: false
         type: integer
         default: 51827

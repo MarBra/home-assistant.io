@@ -18,6 +18,17 @@ ha_codeowners:
   - '@starkillerOG'
 ha_domain: xiaomi_miio
 ha_config_flow: true
+ha_zeroconf: true
+ha_platforms:
+  - air_quality
+  - alarm_control_panel
+  - device_tracker
+  - fan
+  - light
+  - remote
+  - sensor
+  - switch
+  - vacuum
 ---
 
 The `xiaomi_miio` integration supports the following devices:

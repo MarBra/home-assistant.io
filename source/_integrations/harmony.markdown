@@ -12,6 +12,10 @@ ha_codeowners:
   - '@bdraco'
   - '@mkeesey'
 ha_domain: harmony
+ha_ssdp: true
+ha_platforms:
+  - remote
+  - switch
 ---
 
 The `harmony` remote platform allows you to control the state of your [Harmony Hub Device](https://www.logitech.com/en-us/product/harmony-hub).

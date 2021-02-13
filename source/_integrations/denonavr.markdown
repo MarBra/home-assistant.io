@@ -10,6 +10,7 @@ ha_codeowners:
   - '@scarface-4711'
   - '@starkillerOG'
 ha_config_flow: true
+ha_ssdp: true
 ---
 
 The `denonavr` platform allows you to control [Denon Network Receivers](https://www.denon.com/en-gb/shop/networkmusicsystem/ceolpiccolon4) from Home Assistant. It might be that your device is supported by the [Denon] platform.
@@ -98,6 +99,11 @@ zone2:
   required: false
   default: false
   type: boolean
+update_audyssey:
+  description: Specifies if Audyssey settings should be updated. This can take up to 10 Seconds for some receivers.
+  required: false
+  default: false
+  type: boolean
 {% endconfiguration %}
 
 A few notes:
@@ -118,5 +124,14 @@ A comprehensive list of telnet protocol commands is [also available](http://asse
 | ---------------------- | -------- | ---------------------------------------------------- |
 | `entity_id`            |       no | Name of entity to send command to. For example `media_player.marantz`|
 | `command`              |       no | Command to send to device, e.g.,  `/goform/formiPhoneAppDirect.xml?VSMONI2`|
+
+#### Service `denonavr.set_dynamic_eq`
+
+Enable or disable DynamicEQ setting.
+
+| Service data attribute | Optional | Description                                          |
+| ---------------------- | -------- | ---------------------------------------------------- |
+| `entity_id`            |       no | Name of entity to send command to. For example `media_player.marantz`|
+| `dynamic_eq`           |       no | True/false for enable/disable.|
 
 [Denon]: /integrations/denon
